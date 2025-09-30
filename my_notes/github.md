@@ -32,6 +32,36 @@ git init は プロジェクトのルートディレクトリ（Cargo.toml が�
 
 ---
 
+GitHub サイトで作成 → 手動で push（HTTPS を使う場合）
+
+  git remote add origin https://github.com/NoahLovesRuri/asd.git
+  git branch -M main
+  git push -u origin main
+
+もし git push -u origin main でエラーが出たら
+
+  git push -u origin main --force
+
+  注意
+  GitHub 上の既存コミット（README の初回コミット等）が消えます。
+  自分だけのリポジトリで、過去の履歴を残す必要がない場合のみ使ってください。
+
+---
+
+更新したときの流れ
+
+変更をステージング
+  git add .
+
+コミットを作成
+  git commit -m "Update some files"
+
+GitHub へ反映
+  git push origin main（最初だけ -u を付けていましたが、2回目以降は不要です）
+
+---
+
+
 
 
 
